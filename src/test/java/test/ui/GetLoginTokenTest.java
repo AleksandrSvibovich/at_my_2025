@@ -38,12 +38,10 @@ public class GetLoginTokenTest extends BaseTest {
         pass.fill(userPass);
         submitBtn.click();
 
-//        mainMenu.waitFor(new Locator.WaitForOptions().setTimeout(10000));
         mainMenu.waitFor(new Locator.WaitForOptions().setTimeout(20000));
         assertThat(mainMenu).isVisible();
 
         page.navigate(customsURL);
-//        mainMenu.waitFor(new Locator.WaitForOptions().setTimeout(10000));
         cookies = browserContext.cookies();
     }
 
