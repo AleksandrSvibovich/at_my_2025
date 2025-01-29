@@ -1,0 +1,81 @@
+{
+  "supplyType": "IMPORT",
+  "services": [
+    {
+      "code": "LOGISTIC",
+      "selected": true,
+      "description": "Международная логистика"
+    },
+    {
+      "code": "CUSTOMS_SUPPORT",
+      "selected": true,
+      "description": "Таможенное оформление"
+    },
+    {
+      "code": "CERTIFICATION",
+      "selected": true,
+      "description": "Сертификация"
+    }
+  ],
+  "vedDesignServices": [
+    {
+      "code": "INTERNATIONAL_PAYMENTS_AGENT",
+      "selected": true,
+      "description": "Организация трансграничных расчётов"
+    },
+    {
+      "code": "RESIDENT_AGENT",
+      "selected": true,
+      "description": "Поставка с использованием агента-резидента"
+    },
+    {
+      "code": "PARTNER_NON_AGENT",
+      "selected": true,
+      "description": "Торговые операции с партнёрами-нерезидентами"
+    },
+    {
+      "code": "CONTRACTUAL_STRUCTURES",
+      "selected": true,
+      "description": "Консультация по договорным конструкциям"
+    }
+  ],
+  "contractor": "ooo shka",
+  "contractorCountry": {
+    "code": "CN",
+    "name": "КИТАЙ"
+  },
+  "productDescription": " OOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO ",
+  "consolidatedLogisticsData": {
+    "loadingPlace": "Saratov",
+    "deliveryPlace": "Msk",
+    "deliveryCondition": {
+      "code": "CPT",
+      "description": "CPT - ПЕРЕВОЗКА ОПЛАЧЕНА"
+    },
+    "city": "Ser",
+    "cargoWeight": 1233,
+    "consolidatedCargo": true
+  },
+  "consolidatedCertificationData": {
+    "manufacturer": "Pogasjan IP",
+    "country": {
+      "code": "TR",
+      "name": "Тридевятое царство test"
+    },
+    "tradeMark": "RRE3"
+  },
+  "additionalInformation": "OOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO Na na na naOOO N",
+  "attachments": [],
+  "contacts": [
+    {
+      "firstName": "Нан",
+      "middleName": "Ролс",
+      "lastName": "Кули",
+      "phone": "73403248744",
+      "email": "8899@sad.sad",
+      "isMainContactPerson": true
+    }
+  ],
+  "type": "CONSOLIDATED_APPLICATION",
+  "isRulesAccepted": true
+}
