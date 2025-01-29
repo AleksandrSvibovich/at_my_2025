@@ -14,8 +14,8 @@ public class GetLoginTokenTest extends BaseTest {
     private List<Cookie> cookies;
     private static BrowserContext bc;
 
-    String userLogin = "dbo.svibov_at17";
-    String userPass = "Qazwsx123!";
+    String userLogin;
+    String userPass;
 
     String url = "https://if.db-test.vtb.ru/login";
     String customsURL = "https://if.db-test.vtb.ru/ved/customs-services/";
