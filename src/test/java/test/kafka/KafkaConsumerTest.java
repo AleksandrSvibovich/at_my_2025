@@ -12,8 +12,8 @@ import java.util.Properties;
 
 public class KafkaConsumerTest<S, S1> {
     public static void main(String[] args) {
-        Properties properties = new Properties(); //create new property by java utils
-        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092"); // set a bootstrap server
+        Properties properties = new Properties(); //созаем набор новых пропертей
+        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092"); // указываем адрес сервера
         properties.put(ConsumerConfig.GROUP_ID_CONFIG, "test-group"); // название группы может быть любое
         properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName()); // строковая сериализация
         properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName()); // строковая десериализация

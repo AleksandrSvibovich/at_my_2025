@@ -15,7 +15,5 @@ public class ApiConfig {
     public static final String URL_POST_COUNTERPARTY = "https://if.db-test.vtb.ru/api/smb/cssc/customs/api/v14/counterparties/list";
     public static final String URL_APPLICATION = "https://if.db-test.vtb.ru/api/smb/cssc/customs/api/v14/customs/application/";
     public static final String URL_LIST = "https://if.db-test.vtb.ru/api/smb/cssc/customs/api/v14/customs/application/list";
-    public static final String URL_NEXT2 = "";
-
 
 }
