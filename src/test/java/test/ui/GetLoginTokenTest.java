@@ -6,16 +6,34 @@ import com.microsoft.playwright.options.Cookie;
 import org.testng.annotations.Test;
 
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 public class GetLoginTokenTest extends BaseTest {
     private List<Cookie> cookies;
     private static BrowserContext bc;
+    private Properties properties = new Properties();
+    FileInputStream input;
 
-    String userLogin;
-    String userPass;
+    {
+        try {
+            input = new FileInputStream("config.properties");
+            properties.load(input);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    String userLogin = properties.getProperty("userLogin");
+    String userPass= properties.getProperty("userPass");
 
     String url = "https://if.db-test.vtb.ru/login";
     String customsURL = "https://if.db-test.vtb.ru/ved/customs-services/";
