@@ -1,4 +1,5 @@
 package bot;
+
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 //import org.telegram.telegrambots.meta.annotations.TelegramBot;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
@@ -16,16 +17,21 @@ public class MyTelegramBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        System.out.println("Received update: " + update);
         // Проверяем, что сообщение содержит текст
         if (update.hasMessage() && update.getMessage().hasText()) {
             String userMessage = update.getMessage().getText();
             long chatId = update.getMessage().getChatId();
 
-            // Создаем ответное сообщение
             SendMessage message = new SendMessage();
             message.setChatId(String.valueOf(chatId));
-            message.setText("Вы написали: " + userMessage);
+
+            if (userMessage.contains("?")) {
+                message.setText("Надо подумать, приходи за ответом на след. неделе");
+            }else if (userMessage.contains("!")){
+                message.setText("Очень интересная мысль! сам додумался?");
+            }else {
+                message.setText("ну чтож..");
+            }
 
             try {
                 execute(message); // Отправляем сообщение
@@ -44,7 +50,6 @@ public class MyTelegramBot extends TelegramLongPollingBot {
     public String getBotToken() {
         Properties properties = new Properties();
         FileInputStream input = null;
-
         try {
             input = new FileInputStream("config.properties");
             properties.load(input);
@@ -53,7 +58,6 @@ public class MyTelegramBot extends TelegramLongPollingBot {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
         return properties.getProperty("bot"); // Укажите токен вашего бота
     }
 }
